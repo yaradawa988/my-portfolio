@@ -6,6 +6,7 @@ import Projects from "./sections/Projects"
 import Achievements from "./sections/Achievements"
 import Education from "./sections/Education"
 import Contact from "./sections/Contact"
+import About from "./sections/About"
 import ParticlesBackground from "./components/ParticlesBackground"
 import Cursor from "./components/Cursor"
 import Background3D from "./components/Background3D"
@@ -22,6 +23,7 @@ return(
 <Navbar/>
 
 <Hero/>
+<About/>
 <Skills/>
 <Experience/>
 <Projects/>
