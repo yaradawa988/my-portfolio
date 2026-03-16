@@ -8,7 +8,6 @@ import Education from "./sections/Education"
 import Contact from "./sections/Contact"
 import About from "./sections/About"
 import ParticlesBackground from "./components/ParticlesBackground"
-import Cursor from "./components/Cursor"
 import Background3D from "./components/Background3D"
 
 
@@ -19,7 +18,7 @@ return(
 <div className="relative min-h-screen bg-white dark:bg-black text-black dark:text-white">
 <Background3D/>
 <ParticlesBackground/>
-<Cursor/>
+
 <Navbar/>
 
 <Hero/>
