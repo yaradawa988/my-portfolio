@@ -28,12 +28,12 @@ Bachelor of Informatics Engineering
 
 </div>
 
-<p className="text-gray-600 dark:text-gray-300">
-Software & Information Systems
-</p>
+ <p className="text-gray-600 dark:text-gray-300">
+          Specialized in <span className="font-semibold">Software Engineering</span> | Started in <span className="font-semibold">2017</span>
+        </p>
 
 <p className="text-gray-500 text-sm mt-2">
-Lattakia University
+Lattakia University |Syria
 </p>
 
 </motion.div>

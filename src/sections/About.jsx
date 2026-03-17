@@ -112,7 +112,7 @@ About Me
 
 <p className="text-lg text-gray-500 dark:text-gray-300 leading-relaxed">
 
-I'm <span className="text-blue-500 font-semibold">Yara Dawa</span>, an Informatics Engineer passionate about building modern and scalable web applications.
+I'm <span className="text-blue-500 font-semibold">Yara Dawa</span>, an Informatics Engineer specialized in <span className="text-blue-500 font-semibold">Software Engineering</span> and passionate about building modern and scalable web applications.
 
 I specialize in developing robust backend systems with <span className="text-blue-500">Laravel</span> and creating dynamic user interfaces with <span className="text-blue-500">React</span>.
 

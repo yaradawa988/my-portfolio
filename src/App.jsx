@@ -7,8 +7,9 @@ import Achievements from "./sections/Achievements"
 import Education from "./sections/Education"
 import Contact from "./sections/Contact"
 import About from "./sections/About"
-import ParticlesBackground from "./components/ParticlesBackground"
-import Background3D from "./components/Background3D"
+import Footer from "./sections/Footer"
+import { Toaster } from "react-hot-toast"
+
 
 
 function App(){
@@ -16,8 +17,8 @@ function App(){
 return(
 
 <div className="relative min-h-screen bg-white dark:bg-black text-black dark:text-white">
-<Background3D/>
-<ParticlesBackground/>
+<Toaster position="top-right" reverseOrder={false} />
+
 
 <Navbar/>
 
@@ -29,6 +30,7 @@ return(
 <Education/>
 <Contact/>
 <Achievements/>
+ <Footer /> 
 </div>
 
 )

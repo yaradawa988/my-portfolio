@@ -81,10 +81,10 @@ className="fixed w-full bg-white/80 dark:bg-black/80 backdrop-blur-md shadow z-5
 {/* CV Download */}
 
 <a
-href="/resume.pdf"
+href="/Yara-Dawa-Software-Engineer-cv.pdf"
 download
 className="p-3 rounded-full bg-blue-500 text-white hover:scale-110 transition shadow-lg"
-title="Download Resume"
+title="Download My CV"
 >
 <FaDownload/>
 </a>
