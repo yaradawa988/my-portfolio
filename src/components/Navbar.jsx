@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import logo from "../assets/logo.png"
 import { FaMoon, FaSun, FaDownload } from "react-icons/fa"
 
 function Navbar(){
@@ -57,8 +58,23 @@ className="fixed w-full bg-white/80 dark:bg-black/80 backdrop-blur-md shadow z-5
 
 {/* Logo */}
 
-<div className="text-2xl font-bold text-blue-500">
-&lt;Yara.dev/&gt;
+<div className="flex items-center gap-3">
+  
+  {/* Logo Image */}
+  <img
+    src={logo}
+    alt="logo"
+    className="w-10 h-10 rounded-full object-cover 
+    border-2 border-blue-500 
+    shadow-[0_0_15px_rgba(59,130,246,0.6)]
+    hover:scale-110 transition duration-300"
+  />
+
+  {/* Name */}
+  <span className="text-2xl font-bold text-blue-500">
+    &lt;Yara.dev/&gt;
+  </span>
+
 </div>
 
 {/* Menu */}

@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp, FaFacebook, FaInstagram } from "react-icons/fa"
-
+import logo from "../assets/logo.png"
 function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 mt-16">
@@ -7,6 +7,14 @@ function Footer() {
 
         {/* About */}
         <div className="space-y-3">
+          <img
+              src={logo}
+              alt="logo"
+              className="w-10 h-10 rounded-full object-cover 
+              border-2 border-blue-500 
+              shadow-[0_0_15px_rgba(59,130,246,0.6)]
+              hover:scale-110 transition duration-300"
+            />
           <h3 className="text-xl font-semibold">Yara Dawa</h3>
           <p className="text-gray-600 dark:text-gray-400 text-sm">
             Software Engineer & Laravel Developer passionate about building modern, scalable web applications and secure backend systems.
