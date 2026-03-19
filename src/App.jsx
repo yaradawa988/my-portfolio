@@ -25,11 +25,11 @@ return(
 <Hero/>
 <About/>
 <Skills/>
+<Education/>
 <Experience/>
 <Projects/>
-<Education/>
-<Contact/>
 <Achievements/>
+<Contact/>
  <Footer /> 
 </div>
 

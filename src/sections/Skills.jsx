@@ -20,7 +20,7 @@ items:["Laravel","PHP 8+","REST APIs","Queues & Scheduling"]
 {
 icon:<FaShieldAlt size={26}/>,
 title:"Authentication & Security",
-items:["JWT","OAuth2","Sanctum","Spatie Permissions"]
+items:["JWT","OAuth2","Sanctum","Breez","Spatie Permissions"]
 },
 
 {

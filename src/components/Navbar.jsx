@@ -86,6 +86,8 @@ className="fixed w-full bg-white/80 dark:bg-black/80 backdrop-blur-md shadow z-5
 <li><a href="#skills" className="hover:text-blue-500">Skills</a></li>
 <li><a href="#experience" className="hover:text-blue-500">Experience</a></li>
 <li><a href="#projects" className="hover:text-blue-500">Projects</a></li>
+<li><a href="#achievements" className="hover:text-blue-500">Achievements</a></li>
+
 <li><a href="#contact" className="hover:text-blue-500">Contact</a></li>
 
 </ul>
