@@ -39,6 +39,7 @@ function ProjectCard({ project, index }) {
         <img
           src={placeholderImages[index % placeholderImages.length]}
           alt={project.name}
+          loading="lazy" 
           className="w-full h-full object-cover rounded-2xl transition-transform duration-300"
         />
 

@@ -8,13 +8,27 @@ function Navbar(){
   const [dark,setDark] = useState(false)
   const [menuOpen,setMenuOpen] = useState(false)
 
-  useEffect(()=>{
-    const savedTheme = localStorage.getItem("theme")
-    if(savedTheme === "dark"){
-      document.documentElement.classList.add("dark")
-      setDark(true)
+useEffect(() => {
+  const savedTheme = localStorage.getItem("theme");
+  
+  if(savedTheme === "dark") {
+    document.documentElement.classList.add("dark");
+    setDark(true);
+  } else if(savedTheme === "light") {
+    document.documentElement.classList.remove("dark");
+    setDark(false);
+  } else {
+    
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    if(prefersDark){
+      document.documentElement.classList.add("dark");
+      setDark(true);
+    } else {
+      document.documentElement.classList.remove("dark");
+      setDark(false);
     }
-  },[])
+  }
+}, []);
 
   const toggleTheme = () => {
     if(dark){
