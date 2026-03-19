@@ -46,23 +46,23 @@ function Achievements() {
   }, []);
 
   return (
- <section id="achievements" className="py-32 px-6 relative">
+ <section id="achievements" className="py-20 md:py-32 px-4 sm:px-6 relative">
   {/* 🔹 Background Blobs */}
   <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
   <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
 
       {/* 🔥 Styled Section Title */}
 <div className="text-center mb-20">
-  <motion.h2
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    className="text-5xl font-bold"
-  >
+ <motion.h2
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  className="text-3xl sm:text-4xl md:text-5xl font-bold"
+>
     Selected <span className="ml-3 bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
       Work
     </span> & Client Feedback
   </motion.h2>
-  <p className="text-gray-500 dark:text-gray-400 mt-4 text-lg">
+  <p className="text-gray-500 dark:text-gray-400 mt-4 text-sm sm:text-base md:text-lg">
     Showcasing snapshots of my projects and what clients have loved about them
   </p>
 </div>
@@ -71,15 +71,17 @@ function Achievements() {
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row gap-16 md:gap-8 px-12">
         
         {/* Projects Section */}
-        <div className="flex-1 flex justify-center items-end h-[400px] relative">
+        <div className="flex-1 flex flex-col md:flex-row justify-center items-center md:items-end h-auto md:h-[400px] relative gap-6 md:gap-0">
           {projects.map((proj, idx) => (
-            <motion.div
-              key={proj.title}
-              whileHover={{ scale: 1.05, y: -20, zIndex: 10 }}
-              transition={{ type: "spring", stiffness: 200, damping: 20 }}
-              className="absolute w-[220px] md:w-[280px] bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-5 cursor-pointer"
-              style={{ left: `calc(50% + ${idx * 50 - 50}px)` }} // stacked and centered
-            >
+           <motion.div
+  key={proj.title}
+  whileHover={{ scale: 1.05, y: -20, zIndex: 10 }}
+  transition={{ type: "spring", stiffness: 200, damping: 20 }}
+  className="relative md:absolute w-[180px] sm:w-[220px] md:w-[280px] bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-4 md:p-5 cursor-pointer mx-auto"
+  style={{
+    left: `${idx * 40 - 40}px`
+  }}
+>
               <div className="overflow-hidden rounded-3xl w-full h-56">
                 <img
                   src={proj.img}
@@ -110,8 +112,8 @@ function Achievements() {
           ))}
         </div>
 {/* Testimonials Section */} 
-<div className="flex-1 flex flex-col items-center h-[400px] relative">
-  <div className="relative w-full flex justify-center h-[300px] md:h-[400px]">
+<div className="flex-1 flex flex-col items-center min-h-[350px] md:min-h-[400px] relative">
+  <div className="relative w-full flex justify-center min-h-[280px] sm:min-h-[300px] md:min-h-[400px] px-2">
     <AnimatePresence>
       {testimonials.map((t, idx) =>
         idx === testIndex ? (
@@ -121,13 +123,13 @@ function Achievements() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -200 }}
             transition={{ duration: 0.8 }}
-            className="absolute top-0 left-1/2 -translate-x-1/2 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-5 flex flex-col items-center w-[90%] md:w-2/3"
+           className="absolute top-0 left-1/4 -translate-x-1/2 bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-4 md:p-4 flex flex-col items-center w-full max-w-[85%] sm:max-w-[70%] md:max-w-2x"
           >
             <div className="overflow-hidden rounded-3xl w-full h-64 relative">
               <img
                 src={t.img}
                 alt={`Client ${idx + 1}`}
-                className="w-full h-full object-contain rounded-3xl"
+              className="w-full h-full object-contain rounded-3xl"
               />
 
               {/* 🔹 Modern 3D Star */}

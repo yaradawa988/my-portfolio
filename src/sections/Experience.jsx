@@ -23,7 +23,10 @@ const experiences = [
 
 function Experience() {
   return (
-    <section id="experience" className="py-32">
+    <section id="experience"   className="py-20 md:py-32 px-4 sm:px-6 md:px-8 relative overflow-hidden ">
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
+
       <h2 className="text-5xl font-bold text-center mb-20">
         Work Experience
       </h2>
@@ -76,6 +79,7 @@ function Experience() {
           );
         })}
       </div>
+      
     </section>
   );
 }
