@@ -21,7 +21,7 @@ function Contact() {
     }
 
     setLoading(true);
-    setSending(true); // تفعيل أنيميشن الشخصية
+    setSending(true); 
 
     emailjs
       .sendForm(
@@ -35,7 +35,7 @@ function Contact() {
         setLoading(false);
         form.current.reset();
         lastSent.current = Date.now();
-        setTimeout(() => setSending(false), 2000); // إرجاع الشخصية للوضع الطبيعي بعد الإرسال
+        setTimeout(() => setSending(false), 2000); 
       })
       .catch(() => {
         toast.error("Something went wrong ❌");
@@ -46,11 +46,11 @@ function Contact() {
 
   return (
     <section id="contact" className="py-32 px-6 relative">
-      {/* 🌈 خلفية Glow */}
+      {/* Glow */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
   <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
 
-      {/* 🔥 Title */}
+      {/*  Title */}
       <div className="text-center mb-20">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -63,15 +63,15 @@ function Contact() {
           </span>
         </motion.h2>
         <p className="text-gray-500 dark:text-gray-400 mt-4">
-          Let’s build something amazing together 🚀
+          Let’s build something amazing together 
         </p>
       </div>
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-16">
-        {/* 🧑‍💻 شخصية مهندسة الكرتون */}
+        {/* شخصية */}
         <CartoonEngineer sending={sending} />
 
-        {/* 📩 FORM */}
+        {/*  FORM */}
         <motion.form
           ref={form}
           onSubmit={handleSubmit}
@@ -114,7 +114,7 @@ function Contact() {
         </motion.form>
       </div>
 
-      {/* 🌐 Social Links */}
+      {/*  Social Links */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 text-center">
         <motion.a
           whileHover={{ scale: 1.1 }}

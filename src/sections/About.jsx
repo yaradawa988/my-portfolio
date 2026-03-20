@@ -107,7 +107,7 @@ className="text-center max-w-3xl mx-auto mb-20"
 >
 
 <h2 className="text-4xl font-bold mb-6">
-About Me
+About <span className="ml-3 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Me</span>
 </h2>
 
 <p className="text-lg text-gray-500 dark:text-gray-300 leading-relaxed">
