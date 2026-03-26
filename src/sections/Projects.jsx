@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaGithub, FaTimes } from "react-icons/fa";
 
 const placeholderImages = [
-  "/projects/project1.jpg",
-  "/projects/project2.png",
-  "/projects/project3.jpg",
+  "/projects/project1.png",
+  "/projects/project2.jpg",
+  "/projects/project3.png",
   "/projects/project4.jpg",
   "/projects/project5.png",
   "/projects/project6.png",
