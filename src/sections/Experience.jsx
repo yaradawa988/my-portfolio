@@ -29,11 +29,11 @@ function Experience() {
       id="experience"
       className="py-20 md:py-32 px-4 sm:px-6 md:px-8 relative overflow-hidden"
     >
-      {/* 🔹 Background */}
+      {/* Background */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
 
-      {/* 🔥 Title */}
+      {/* Title */}
       <div className="text-center mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">
           Work <span className="ml-3 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Experience</span>
@@ -45,7 +45,7 @@ function Experience() {
 
       <div className="relative max-w-5xl mx-auto">
 
-        {/* 🔹 Vertical Line (desktop only) */}
+        {/* Vertical Line (desktop only) */}
         <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-blue-500"></div>
 
         {experiences.map((exp, index) => {
@@ -61,7 +61,7 @@ function Experience() {
                 isLeft ? "md:justify-start" : "md:justify-end"
               }`}
             >
-              {/* 🔹 Card */}
+              {/* Card */}
               <div className="w-full md:w-1/2 px-2 md:px-6">
                 <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md p-6 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700 hover:shadow-2xl transition">
 
@@ -111,7 +111,7 @@ function Experience() {
                 </div>
               </div>
 
-              {/* 🔹 Dot */}
+              {/* Dot */}
               <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-blue-500 rounded-full border-4 border-white dark:border-gray-900"></div>
             </motion.div>
           );
