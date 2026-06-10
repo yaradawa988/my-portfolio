@@ -136,7 +136,7 @@ function Navbar(){
           <div className="flex items-center gap-4">
 
             <a
-              href="/Yara-Dawa-Software-Engineer-cv.pdf"
+              href="/y.pdf"
               download
               className="p-3 rounded-full bg-blue-500 text-white hover:scale-110 transition shadow-lg"
               title="Download My CV"

@@ -109,14 +109,13 @@ className="text-center max-w-3xl mx-auto mb-20"
 <h2 className="text-4xl font-bold mb-6">
 About <span className="ml-3 bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">Me</span>
 </h2>
-
 <p className="text-lg text-gray-500 dark:text-gray-300 leading-relaxed">
 
-I'm <span className="text-blue-500 font-semibold">Yara Dawa</span>, an Informatics Engineer specialized in <span className="text-blue-500 font-semibold">Software Engineering</span> and passionate about building modern and scalable web applications.
+<span className="text-blue-500">Full-Stack Software Engineer</span> with a strong focus on backend development, scalable system architecture, and modern web application development.
 
-I specialize in developing robust backend systems with <span className="text-blue-500">Laravel</span> and creating dynamic user interfaces with <span className="text-blue-500">React</span>.
+Skilled in building secure APIs, designing efficient database structures, integrating third-party services, and developing responsive user experiences using Laravel, React, MySQL, and modern development practices.
 
-My focus is on building secure APIs, integrating external services, and delivering high-quality full-stack solutions.
+Committed to writing clean, maintainable code and delivering reliable software solutions that balance technical excellence with business needs.
 
 </p>
 

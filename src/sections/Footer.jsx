@@ -22,61 +22,90 @@ function Footer() {
             Software Engineer & Laravel Developer passionate about building modern, scalable web applications and secure backend systems.
           </p>
         </div>
+{/* Social Media */}
+<div className="text-center">
+  <h3 className="text-xl font-semibold mb-5">
+    Connect With Me
+  </h3>
 
-        {/* Social Media */}
-        <div className="space-y-3 text-center">
-          <h3 className="text-xl font-semibold">Connect with me</h3>
+  <div className="flex justify-center items-center gap-6 md:gap-8">
 
-          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 mt-4 text-2xl">
+    <a
+      href="https://linkedin.com/in/yara-dawa-9090ab296"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#0A66C2]
+      text-2xl
+      transition-all duration-300
+      hover:scale-125 hover:-translate-y-1"
+    >
+      <FaLinkedin />
+    </a>
 
-            <a href="https://linkedin.com/in/yara-dawa-9090ab296"
-              className="p-3 rounded-full transition duration-300 
-              hover:scale-110 hover:-translate-y-1
-              hover:shadow-[0_0_20px_#0A66C2]">
-              <FaLinkedin className="text-[#0A66C2]" />
-            </a>
+    <a
+      href="https://github.com/yaradawa988"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-gray-700 dark:text-gray-300
+      text-2xl
+      transition-all duration-300
+      hover:scale-125 hover:-translate-y-1"
+    >
+      <FaGithub />
+    </a>
 
-            <a href="https://github.com/yaradawa988"
-              className="p-3 rounded-full transition duration-300 
-              hover:scale-110 hover:-translate-y-1
-              hover:shadow-[0_0_20px_#6e5494]">
-              <FaGithub className="text-[#6e5494]" />
-            </a>
+    <a
+      href="mailto:yara.mas484@gmail.com"
+      className="text-red-500
+      text-2xl
+      transition-all duration-300
+      hover:scale-125 hover:-translate-y-1"
+    >
+      <FaEnvelope />
+    </a>
 
-            <a href="mailto:yara.mas484@gmail.com"
-              className="p-3 rounded-full transition duration-300 
-              hover:scale-110 hover:-translate-y-1
-              hover:shadow-[0_0_20px_#EA4335]">
-              <FaEnvelope className="text-[#EA4335]" />
-            </a>
+    <a
+      href="https://wa.me/963997737851"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-green-500
+      text-2xl
+      transition-all duration-300
+      hover:scale-125 hover:-translate-y-1"
+    >
+      <FaWhatsapp />
+    </a>
 
-            <a href="https://wa.me/963997737851"
-              className="p-3 rounded-full transition duration-300 
-              hover:scale-110 hover:-translate-y-1
-              hover:shadow-[0_0_20px_#25D366]">
-              <FaWhatsapp className="text-[#25D366]" />
-            </a>
+    <a
+      href="https://www.facebook.com/share/188w4ZZ6Fb"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600
+      text-2xl
+      transition-all duration-300
+      hover:scale-125 hover:-translate-y-1"
+    >
+      <FaFacebook />
+    </a>
 
-            <a href="https://www.facebook.com/share/188w4ZZ6Fb"
-              className="p-3 rounded-full transition duration-300 
-              hover:scale-110 hover:-translate-y-1
-              hover:shadow-[0_0_20px_#1877F2]">
-              <FaFacebook className="text-[#1877F2]" />
-            </a>
+    <a
+      href="https://www.instagram.com/yaraadawa"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-pink-500
+      text-2xl
+      transition-all duration-300
+      hover:scale-125 hover:-translate-y-1"
+    >
+      <FaInstagram />
+    </a>
 
-            <a href="https://www.instagram.com/yaraadawa"
-              className="p-3 rounded-full transition duration-300 
-              hover:scale-110 hover:-translate-y-1
-              hover:shadow-[0_0_20px_#E1306C]">
-              <FaInstagram className="text-[#E1306C]" />
-            </a>
-
-          </div>
-        </div>
+  </div>
+</div>
 
         {/* Contact Info */}
         <div className="space-y-3 text-center md:text-left">
-          <h3 className="text-xl font-semibold">Contact</h3>
+          <h3 className="text-xl font-semibold"></h3>
           <p className="text-gray-600 dark:text-gray-400 text-sm">
             Tartous, Syria
           </p>

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 import { useState } from "react"
 import { FaGithub, FaLinkedin, FaEnvelope, FaWhatsapp, FaDownload, FaSpinner } from "react-icons/fa"
-import avatar from "../assets/avatar.jpg"
+import avatar from "../assets/avatar13.png"
 
 function Hero() {
   const particles = Array.from({ length: 10 })
@@ -10,7 +10,7 @@ function Hero() {
   const handleOpenCV = () => {
     setLoading(true)
     setTimeout(() => {
-      window.open("/Yara-Dawa-Software-Engineer-cv.pdf", "_blank")
+      window.open("/y.pdf", "_blank")
       setLoading(false)
     }, 800)
   }

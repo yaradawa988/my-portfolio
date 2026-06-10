@@ -10,7 +10,10 @@ return(
   <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
 
 <h2 className="text-5xl font-bold text-center mb-16">
-Education
+  Educa
+  <span className="bg-gradient-to-r from-blue-400 to-purple-500 text-transparent bg-clip-text">
+    tion
+  </span>
 </h2>
 
 <motion.div
@@ -31,11 +34,11 @@ Bachelor of Informatics Engineering
 </div>
 
  <p className="text-gray-600 dark:text-gray-300">
-          Specialized in <span className="font-semibold">Software Engineering</span> | Started in <span className="font-semibold">2017</span>
+          Specialized in <span className="font-semibold">Software Engineering</span> | Graduated in <span className="font-semibold">2023</span>
         </p>
 
 <p className="text-gray-500 text-sm mt-2">
-Lattakia University |Syria
+Latakia University |Syria
 </p>
 
 </motion.div>

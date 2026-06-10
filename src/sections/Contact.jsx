@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
-import CartoonEngineer from "../components/CartoonEngineer";
+import DeveloperWorkspace from "../components/DeveloperWorkspace";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -35,7 +35,7 @@ function Contact() {
         setLoading(false);
         form.current.reset();
         lastSent.current = Date.now();
-        setTimeout(() => setSending(false), 2000); 
+        setTimeout(() => setSending(false), 3000); 
       })
       .catch(() => {
         toast.error("Something went wrong ❌");
@@ -69,7 +69,7 @@ function Contact() {
 
       <div className="flex flex-col md:flex-row items-center justify-center gap-16">
         {/* شخصية */}
-        <CartoonEngineer sending={sending} />
+       <DeveloperWorkspace sending={sending} />
 
         {/*  FORM */}
         <motion.form
