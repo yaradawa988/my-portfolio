@@ -45,17 +45,20 @@ function Contact() {
   };
 
   return (
-    <section id="contact" className="py-32 px-6 relative">
+    <section
+  id="contact"
+  className="py-24 md:py-32 px-4 sm:px-6 relative overflow-hidden"
+>
       {/* Glow */}
       <div className="absolute -top-20 -left-20 w-72 h-72 bg-blue-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
   <div className="absolute bottom-0 right-0 w-72 h-72 bg-purple-500 opacity-20 blur-3xl rounded-full pointer-events-none"></div>
-
+<div className="w-full max-w-7xl mx-auto">
       {/*  Title */}
       <div className="text-center mb-20">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-5xl font-bold"
+          className="text-4xl sm:text-5xl font-bold"
         >
           Get In
           <span className="ml-3 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -67,7 +70,17 @@ function Contact() {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center gap-16">
+      <div
+  className="
+  flex
+  flex-col
+  lg:flex-row
+  items-center
+  justify-center
+  gap-10
+  lg:gap-16
+  "
+>
         {/* شخصية */}
        <DeveloperWorkspace sending={sending} />
 
@@ -77,7 +90,7 @@ function Contact() {
           onSubmit={handleSubmit}
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
-          className="backdrop-blur-xl bg-white/30 dark:bg-white/10 p-8 rounded-2xl shadow-2xl border border-white/20 space-y-5 w-full max-w-md"
+          className="backdrop-blur-xl bg-white/30 dark:bg-white/10 p-5 sm:p-8 rounded-2xl shadow-2xl border border-white/20 space-y-5 w-full max-w-md"
         >
           <input
             type="text"
@@ -115,13 +128,27 @@ function Contact() {
       </div>
 
       {/*  Social Links */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 text-center">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-20 text-center">
         <motion.a
           whileHover={{ scale: 1.1 }}
-          href="mailto:yara.mas484@gmail.com"
-          className="bg-white/40 dark:bg-gray-800/40 backdrop-blur p-5 rounded-xl shadow"
+           href="https://mail.google.com/mail/?view=cm&fs=1&to=yara.mas484@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
+         className="
+bg-white/40
+dark:bg-gray-800/40
+backdrop-blur
+p-4 sm:p-5
+rounded-xl
+shadow
+min-h-[120px]
+flex
+flex-col
+justify-center
+items-center
+"
         >
-          <MdEmail className="text-3xl mx-auto mb-2 text-blue-500" />
+          <MdEmail className="text-2xl sm:text-3xl mx-auto mb-2 text-blue-500" />
           <span className="text-sm">Email</span>
         </motion.a>
 
@@ -129,9 +156,21 @@ function Contact() {
           whileHover={{ scale: 1.1 }}
           href="https://github.com/yaradawa988"
           target="_blank"
-          className="bg-white/40 dark:bg-gray-800/40 backdrop-blur p-5 rounded-xl shadow"
+          className="
+bg-white/40
+dark:bg-gray-800/40
+backdrop-blur
+p-4 sm:p-5
+rounded-xl
+shadow
+min-h-[120px]
+flex
+flex-col
+justify-center
+items-center
+"
         >
-          <FaGithub className="text-3xl mx-auto mb-2" />
+          <FaGithub className="text-2xl sm:text-3xl mx-auto mb-2" />
           <span className="text-sm">GitHub</span>
         </motion.a>
 
@@ -139,9 +178,21 @@ function Contact() {
           whileHover={{ scale: 1.1 }}
           href="https://linkedin.com/in/yara-dawa-9090ab296"
           target="_blank"
-          className="bg-white/40 dark:bg-gray-800/40 backdrop-blur p-5 rounded-xl shadow"
+          className="
+bg-white/40
+dark:bg-gray-800/40
+backdrop-blur
+p-4 sm:p-5
+rounded-xl
+shadow
+min-h-[120px]
+flex
+flex-col
+justify-center
+items-center
+"
         >
-          <FaLinkedin className="text-3xl mx-auto mb-2 text-blue-500" />
+          <FaLinkedin className="text-2xl sm:text-3xl mx-auto mb-2 text-blue-500" />
           <span className="text-sm">LinkedIn</span>
         </motion.a>
 
@@ -149,12 +200,25 @@ function Contact() {
           whileHover={{ scale: 1.1 }}
           href="https://wa.me/963997737851"
           target="_blank"
-          className="bg-white/40 dark:bg-gray-800/40 backdrop-blur p-5 rounded-xl shadow"
+         className="
+bg-white/40
+dark:bg-gray-800/40
+backdrop-blur
+p-4 sm:p-5
+rounded-xl
+shadow
+min-h-[120px]
+flex
+flex-col
+justify-center
+items-center
+"
         >
-          <FaWhatsapp className="text-3xl mx-auto mb-2 text-green-500" />
+          <FaWhatsapp className="text-2xl sm:text-3xl mx-auto mb-2 text-green-500" />
           <span className="text-sm">WhatsApp</span>
         </motion.a>
       </div>
+</div>
     </section>
   );
 }

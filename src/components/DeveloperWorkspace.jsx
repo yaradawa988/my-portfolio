@@ -30,7 +30,7 @@ function DeveloperWorkspace({ sending }) {
       />
 
       {/* Laptop */}
-      <div className="relative w-[420px] max-w-full">
+      <div className="relative w-full max-w-[420px]">
         
         {/* Screen */}
         <div

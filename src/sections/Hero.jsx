@@ -10,7 +10,7 @@ function Hero() {
   const handleOpenCV = () => {
     setLoading(true)
     setTimeout(() => {
-      window.open("/y.pdf", "_blank")
+      window.open("/Yara-Dawa-Software-Engineer-cv.pdf", "_blank")
       setLoading(false)
     }, 800)
   }
@@ -120,7 +120,9 @@ function Hero() {
             <a href="https://github.com/yaradawa988" className="group p-3 rounded-full bg-gray-900 dark:bg-gray-800 transition duration-300 shadow-[0_0_15px_rgba(139,92,246,0.6)] hover:bg-purple-500 hover:scale-110">
               <FaGithub className="text-purple-500 group-hover:text-white transition" />
             </a>
-            <a href="mailto:yara.mas484@gmail.com" className="group p-3 rounded-full bg-gray-900 dark:bg-gray-800 transition duration-300 shadow-[0_0_15px_rgba(239,68,68,0.6)] hover:bg-red-500 hover:scale-110">
+            <a  href="https://mail.google.com/mail/?view=cm&fs=1&to=yara.mas484@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer" className="group p-3 rounded-full bg-gray-900 dark:bg-gray-800 transition duration-300 shadow-[0_0_15px_rgba(239,68,68,0.6)] hover:bg-red-500 hover:scale-110">
               <FaEnvelope className="text-red-500 group-hover:text-white transition" />
             </a>
             <a href="https://wa.me/963997737851" className="group p-3 rounded-full bg-gray-900 dark:bg-gray-800 transition duration-300 shadow-[0_0_15px_rgba(34,197,94,0.6)] hover:bg-green-500 hover:scale-110">

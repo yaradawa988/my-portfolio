@@ -28,7 +28,7 @@ function Footer() {
     Connect With Me
   </h3>
 
-  <div className="flex justify-center items-center gap-6 md:gap-8">
+  <div className="flex flex-wrap justify-center items-center gap-5 sm:gap-6 md:gap-8">
 
     <a
       href="https://linkedin.com/in/yara-dawa-9090ab296"
@@ -55,7 +55,9 @@ function Footer() {
     </a>
 
     <a
-      href="mailto:yara.mas484@gmail.com"
+      href="https://mail.google.com/mail/?view=cm&fs=1&to=yara.mas484@gmail.com"
+  target="_blank"
+  rel="noopener noreferrer"
       className="text-red-500
       text-2xl
       transition-all duration-300
