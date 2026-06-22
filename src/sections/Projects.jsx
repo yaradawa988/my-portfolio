@@ -1,6 +1,11 @@
 import { useEffect, useState } from "react"; 
 import { motion, AnimatePresence } from "framer-motion";
-import { FaGithub, FaTimes } from "react-icons/fa";
+import {   FaGithub,
+  FaTimes,
+  FaCode,
+  FaStar,
+  FaCalendarAlt,
+  FaExternalLinkAlt} from "react-icons/fa";
 
 const placeholderImages = [
   "/projects/project1.png",
@@ -8,6 +13,7 @@ const placeholderImages = [
   "/projects/project3.png",
   "/projects/project4.jpg",
   "/projects/project5.png",
+  "/projects/gobus-home.png",
   "/projects/project6.png",
   "/projects/project7.png",
   "/projects/project8.png",
@@ -16,6 +22,7 @@ const placeholderImages = [
   "/projects/project11.jpeg",
   "/projects/project13.jpg",
    "/projects/project12.jpg",
+  
 ];
 
 function ProjectCard({ project, index, onViewDetails }) {
@@ -54,6 +61,7 @@ function Projects() {
   const [modalOpen, setModalOpen] = useState(false);
   const [modalProject, setModalProject] = useState(null);
   const [modalIndex, setModalIndex] = useState(0);
+  const [projectLanguages, setProjectLanguages] = useState([]);
 
   useEffect(() => {
     fetch("https://api.github.com/users/yaradawa988/repos")
@@ -67,16 +75,46 @@ function Projects() {
 
   const displayedProjects = showAll ? projects : projects.slice(0, 6);
 
-  const openModal = (project, index) => {
-    setModalProject(project);
-    setModalIndex(index);
-    setModalOpen(true);
-  };
+ const openModal = async (project, index) => {
 
-  const closeModal = () => {
-    setModalOpen(false);
-    setModalProject(null);
-  };
+  setModalProject(project);
+  setModalIndex(index);
+  setModalOpen(true);
+
+  try {
+
+    const response = await fetch(
+      project.languages_url
+    );
+
+   const languages = await response.json();
+
+if (
+  languages &&
+  typeof languages === "object" &&
+  !languages.message
+) {
+  setProjectLanguages(
+    Object.keys(languages)
+  );
+} else {
+  setProjectLanguages([]);
+}
+
+  } catch (error) {
+
+    console.error(error);
+
+    setProjectLanguages([]);
+
+  }
+};
+
+ const closeModal = () => {
+  setModalOpen(false);
+  setModalProject(null);
+  setProjectLanguages([]);
+};
 
   return (
     <section id="projects" className="py-20 md:py-32 px-4 sm:px-6 md:px-8 relative overflow-hidden">
@@ -103,7 +141,7 @@ function Projects() {
       >
         {displayedProjects.map((project, idx) => (
           <ProjectCard
-            key={project.id}
+           key={project.id || project.name}
             project={project}
             index={idx}
             onViewDetails={openModal}
@@ -166,11 +204,21 @@ function Projects() {
                 transition={{ duration: 0.4 }}
                 className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden flex-shrink-0"
               >
-                <img
-                  src={placeholderImages[modalIndex % placeholderImages.length]}
-                  alt={modalProject.name}
-                  className="w-full h-full object-cover rounded-t-3xl md:rounded-l-3xl"
-                />
+               <img
+  src={
+    placeholderImages[
+      Math.abs(modalIndex) %
+      placeholderImages.length
+    ]
+  }
+  alt={modalProject?.name || "Project"}
+  className="
+    w-full
+    h-full
+    object-cover
+    rounded-t-3xl
+    md:rounded-l-3xl"
+/>
               </motion.div>
 
               {/* Right: Details */}
@@ -182,30 +230,189 @@ function Projects() {
                 className="w-full md:w-1/2 p-6 flex flex-col justify-between overflow-y-auto max-h-[80vh]"
               >
                 <div>
-                  <h3 className="text-2xl font-bold mb-4">{modalProject.name}</h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4 text-sm sm:text-base">
-                    {modalProject.description || "This project has no detailed description."}
-                  </p>
-                  <ul className="text-gray-600 dark:text-gray-400 text-sm space-y-2 mb-4">
-                    <li>
-                      <strong>Technologies:</strong> {modalProject.language || "N/A"}
-                    </li>
-                   
-                
-                  </ul>
-                </div>
+
+  <div className="flex items-center gap-3 mb-4">
+
+    <div
+      className="
+      w-12
+      h-12
+      rounded-xl
+      bg-gradient-to-r
+      from-blue-500
+      to-purple-500
+      flex
+      items-center
+      justify-center
+      text-white"
+    >
+      <FaCode />
+    </div>
+
+    <div>
+
+      <h3 className="text-2xl font-bold">
+        {modalProject.name}
+      </h3>
+
+      <p className="text-sm text-gray-500">
+        GitHub Repository
+      </p>
+
+    </div>
+
+  </div>
+
+  <p
+    className="
+    text-gray-700
+    dark:text-gray-300
+    leading-relaxed
+    mb-6"
+  >
+    {
+      modalProject.description ||
+      "Professional software project available on GitHub."
+    }
+  </p>
+
+  {/* Stats */}
+
+  <div
+    className="
+    grid
+    grid-cols-2
+    gap-4
+    mb-6"
+  >
+
+    <div
+      className="
+      bg-gray-100
+      dark:bg-gray-800
+      rounded-xl
+      p-4"
+    >
+      <p className="text-xs text-gray-500">
+        Stars
+      </p>
+
+      <p className="font-bold text-lg flex items-center gap-2">
+        <FaStar className="text-yellow-500" />
+
+        {modalProject.stargazers_count}
+      </p>
+    </div>
+
+    <div
+      className="
+      bg-gray-100
+      dark:bg-gray-800
+      rounded-xl
+      p-4"
+    >
+      <p className="text-xs text-gray-500">
+        Created
+      </p>
+
+      <p className="font-semibold text-sm flex items-center gap-2">
+        <FaCalendarAlt />
+
+        {new Date(
+          modalProject.created_at
+        ).toLocaleDateString()}
+      </p>
+    </div>
+
+  </div>
+
+  {/* Technologies */}
+
+  <div className="mb-6">
+
+    <h4
+      className="
+      font-bold
+      mb-3
+      text-lg"
+    >
+      Technologies
+    </h4>
+
+    <div className="flex flex-wrap gap-2">
+
+      {projectLanguages.length > 0 ? (
+
+        projectLanguages.map((tech) => (
+
+          <span
+            key={tech}
+            className="
+            px-3
+            py-1.5
+            rounded-full
+            bg-gradient-to-r
+            from-blue-500
+            to-purple-500
+            text-white
+            text-xs
+            font-semibold
+            shadow"
+          >
+            {tech}
+          </span>
+
+        ))
+
+      ) : (
+
+        <span
+          className="
+          text-gray-500
+          text-sm"
+        >
+          No technologies available
+        </span>
+
+      )}
+
+    </div>
+
+  </div>
+
+</div>
 
                 {/* GitHub Button */}
-                <motion.a
-                  href={modalProject.html_url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="px-4 py-2 bg-purple-500 hover:bg-purple-600 text-white rounded-lg shadow-md flex items-center gap-2 justify-center mt-4"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <FaGithub /> GitHub
-                </motion.a>
+              <motion.a
+  href={modalProject.html_url}
+  target="_blank"
+  rel="noopener noreferrer"
+  whileHover={{ scale: 1.04 }}
+  className="
+  w-full
+  bg-gradient-to-r
+  from-blue-600
+  to-purple-600
+  hover:from-blue-700
+  hover:to-purple-700
+  text-white
+  rounded-xl
+  py-3
+  font-semibold
+  flex
+  items-center
+  justify-center
+  gap-3
+  shadow-lg"
+>
+
+  <FaGithub />
+
+  View Source Code
+
+  <FaExternalLinkAlt />
+
+</motion.a>
               </motion.div>
             </motion.div>
           </motion.div>
