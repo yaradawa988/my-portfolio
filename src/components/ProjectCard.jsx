@@ -3,6 +3,8 @@ import { FaGithub, FaLaravel, FaReact } from "react-icons/fa"
 import { SiMysql, SiTailwindcss, SiJavascript } from "react-icons/si"
 import { BiCodeAlt } from "react-icons/bi"
 
+
+
 function ProjectCard({project}){
 
 

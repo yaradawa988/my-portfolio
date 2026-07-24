@@ -6,24 +6,8 @@ import {   FaGithub,
   FaStar,
   FaCalendarAlt,
   FaExternalLinkAlt} from "react-icons/fa";
-
-const placeholderImages = [
-  "/projects/project1.png",
-  "/projects/project2.jpg",
-  "/projects/project3.png",
-  "/projects/project4.jpg",
-  "/projects/project5.png",
-  "/projects/gobus-home.png",
-  "/projects/project6.png",
-  "/projects/project7.png",
-  "/projects/project8.png",
-  "/projects/project9.png",
-  "/projects/project10.png",
-  "/projects/project11.jpeg",
-  "/projects/project13.jpg",
-   "/projects/project12.jpg",
-  
-];
+import { getProjectImage } from "../data/projectImages";
+const defaultImage = "/projects/default.png";
 
 function ProjectCard({ project, index, onViewDetails }) {
   return (
@@ -34,12 +18,16 @@ function ProjectCard({ project, index, onViewDetails }) {
     >
       <div className="relative w-full h-56 sm:h-64 md:h-72 overflow-hidden rounded-3xl">
         <motion.img
-          src={placeholderImages[index % placeholderImages.length]}
-          alt={project.name}
-          loading="lazy"
-          className="w-full h-full object-cover rounded-3xl transition-transform duration-500 ease-in-out"
-          whileHover={{ scale: 1.1 }}
-        />
+  src={getProjectImage(project.name)}
+  alt={project.name}
+  loading="lazy"
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = defaultImage;
+  }}
+  className="w-full h-full object-cover rounded-3xl transition-transform duration-500 ease-in-out"
+  whileHover={{ scale: 1.1 }}
+/>
         <motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
@@ -204,14 +192,13 @@ if (
                 transition={{ duration: 0.4 }}
                 className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden flex-shrink-0"
               >
-               <img
-  src={
-    placeholderImages[
-      Math.abs(modalIndex) %
-      placeholderImages.length
-    ]
-  }
+              <img
+  src={getProjectImage(modalProject?.name)}
   alt={modalProject?.name || "Project"}
+  onError={(e) => {
+    e.target.onerror = null;
+    e.target.src = defaultImage;
+  }}
   className="
     w-full
     h-full
